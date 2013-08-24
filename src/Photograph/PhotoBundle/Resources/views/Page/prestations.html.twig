@@ -1,155 +1,212 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-<div class="main_wrapper">
-    <!-- C O N T E N T -->
-    <div class="content_wrapper">
-        <div class="page_title_block">
+    <div class="main_wrapper">
+        <!-- C O N T E N T -->
+        <div class="content_wrapper">
+            <div class="page_title_block">
+                <div class="container">
+                    <h1 class="title">Prestations</h1>
+                </div>
+            </div>
             <div class="container">
-                <h1 class="title">Prestations</h1>
-            </div>
-        </div>
-        <div class="container">	            
-            <div class="content_block right-sidebar row">
-                <div class="fl-container span9">
-                    <div class="row">
-                        <div class="posts-block span9">                            	
-                            <div class="contentarea">
+                <div class="content_block row">
+                    <div class="fl-container span9">
+                        <div class="row">
+                            <div class="posts-block span12">
+                                <div class="contentarea">
 
-                                <div class="row-fluid">
-                                    <div class="span12 module_cont module_text_area module_medium_padding">
-                                        <h3 class="headInModule"></h3>
-                                        <p>Les prestations commencent à partir de 250 euros.</p>
-                                        <p>Lors de ma prestation, je suis à votre entière disposition pendant un nombre d’heures qui varie en fonction de la formule choisie. </p>
-                                        <p>Je m’engage à délivrer les photos dans un délai de 4 semaines suivant le mariage.</p>				
-                                        <p>Les frais de déplacement  sont inclus dans la région Alsace-Lorraine, Luxembourg et Province Luxembourg en Belgique. Pour toute autre région, veuillez me contacter.</p>
+                                    <div class="row-fluid">
+                                        <div class="span12 module_cont module_text_area module_medium_padding">
+                                            <h3 class="headInModule"></h3>
+
+                                            <p>Les prestations commencent à partir de 250 euros.</p>
+
+                                            <p>Lors de ma prestation, je suis à votre entière disposition pendant un
+                                                nombre d’heures qui varie en fonction de la formule choisie. </p>
+
+                                            <p>Je m’engage à délivrer les photos dans un délai de 4 semaines suivant le
+                                                mariage.</p>
+
+                                            <p>Les frais de déplacement sont inclus dans la région Alsace-Lorraine,
+                                                Luxembourg et Province Luxembourg en Belgique. Pour toute autre région,
+                                                veuillez me contacter.</p>
+                                        </div>
                                     </div>
-                                </div><!-- .row-fluid -->
+                                    <!-- .row-fluid -->
 
-                                <div class="row-fluid">
-                                    <div class="span12 module_cont module_text_area module_medium_padding">
-                                        <h3 class="headInModule">Formule Bronze</h3>
-                                        <a id="anchor1"></a>
+                                    <div class="row-fluid">
+                                        <div class="span12 module_cont module_text_area module_medium_padding">
+                                            <img src="{{ asset('img/bronze.jpg') }}" alt="formule bronze"
+                                                 style="float:left"/>
 
-                                        <ul class="list_type1">
-                                            <li>6H de prestation le jour du mariage * (plage horaire à préciser avec les mariés)</li>
-                                            <li>Rencontre des futurs mariés avant le mariage et signature du contrat de prestation</li>
-                                            <li>La prestation comprend un photo reportage permettant de couvrir les thèmes suivants:
-                                                <ul>
-                                                    <li>préparatifs (habillage, maquillage, coiffeur)</li>
-                                                    <li>cérémonie</li>
-                                                    <li>photos de couple ou/et de groupe</li>
-                                                    <li>vin d’honneur</li>
+                                            <div style="float:right">
+                                                <h3 class="headInModule">Formule Bronze</h3>
+                                                <a id="anchor1"></a>
+
+                                                <ul class="list_type1">
+                                                    <li>6H de prestation le jour du mariage * (plage horaire à préciser
+                                                        avec les mariés)
+                                                    </li>
+                                                    <li>Rencontre des futurs mariés avant le mariage et signature du
+                                                        contrat de prestation
+                                                    </li>
+                                                    <li>La prestation comprend un photo reportage permettant de couvrir
+                                                        les thèmes suivants:
+                                                        <ul>
+                                                            <li>préparatifs (habillage, maquillage, coiffeur)</li>
+                                                            <li>cérémonie</li>
+                                                            <li>photos de couple ou/et de groupe</li>
+                                                            <li>vin d’honneur</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Travail de post-production et de retouches</li>
+                                                    <li>1 DVD contenant les photos retravaillées en haute résolution
+                                                        (min. 150 photos)
+                                                    </li>
+                                                    <li>Galerie photo internet sécurisée et disponible pendant 1 an
+                                                        minimum.
+                                                    </li>
+                                                    <li>Cession intégrale des droits de reproduction dans un cadre privé
+                                                        uniquement.
+                                                    </li>
                                                 </ul>
-                                            </li>
-                                            <li>Travail de post-production et de retouches</li>
-                                            <li>1 DVD contenant les photos retravaillées en haute résolution (min. 150 photos)</li>
-                                            <li>Galerie photo internet sécurisée et disponible pendant 1 an minimum.</li>
-                                            <li>Cession intégrale des droits de reproduction dans un cadre privé uniquement.</li>
-                                        </ul>
-                                        <i>prix sur demande</i>
-                                    </div>								
-                                </div><!-- .row-fluid -->
+                                                <i>prix sur demande</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- .row-fluid -->
 
-                                <div class="row-fluid">
-                                    <div class="span12 module_cont module_text_area module_medium_padding">
-                                        <h3 class="headInModule">Formule Silver</h3>
-                                        <a id="anchor2"></a>
+                                    <div class="row-fluid">
 
-                                        <ul class="list_type1">
-                                            <li>10H de prestation le jour du mariage * (plage horaire à préciser avec les mariés)</li>
-                                            <li>Rencontre des futurs mariés avant le mariage et signature du contrat de prestation</li>
-                                            <li>La prestation comprend un photo reportage permettant de couvrir les thèmes suivants:
-                                                <ul>
-                                                    <li>préparatifs (habillage, maquillage, coiffeur)</li>
-                                                    <li>cérémonie</li>
-                                                    <li>photos de couple ou/et de groupe</li>
-                                                    <li>vin d’honneur</li>
-                                                    <li>dîner</li>
-                                                    <li>soirée dansante jusqu’à 22H maximum</li>
+                                        <div class="span12 module_cont module_text_area module_medium_padding">
+                                            <img src="{{ asset('img/silver.jpg') }}" alt="formule silver" style="float: left"/>
+
+                                            <div style="float: right ">
+                                                <h3 class="headInModule">Formule Silver</h3>
+                                                <a id="anchor2"></a>
+
+                                                <ul class="list_type1">
+                                                    <li>10H de prestation le jour du mariage * (plage horaire à préciser
+                                                        avec les mariés)
+                                                    </li>
+                                                    <li>Rencontre des futurs mariés avant le mariage et signature du
+                                                        contrat de prestation
+                                                    </li>
+                                                    <li>La prestation comprend un photo reportage permettant de couvrir
+                                                        les thèmes suivants:
+                                                        <ul>
+                                                            <li>préparatifs (habillage, maquillage, coiffeur)</li>
+                                                            <li>cérémonie</li>
+                                                            <li>photos de couple ou/et de groupe</li>
+                                                            <li>vin d’honneur</li>
+                                                            <li>dîner</li>
+                                                            <li>soirée dansante jusqu’à 22H maximum</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Travail de post-production et de retouches</li>
+                                                    <li>1 DVD contenant les photos retravaillées en haute résolution
+                                                        (min. 180 photos)
+                                                    </li>
+                                                    <li>2 DVD “copies aux parents”</li>
+                                                    <li>Galerie photo internet sécurisée et disponible pendant 1 an
+                                                        minimum.
+                                                    </li>
+                                                    <li>Cession intégrale des droits de reproduction dans un cadre privé
+                                                        uniquement.
+                                                    </li>
                                                 </ul>
-                                            </li>
-                                            <li>Travail de post-production et de retouches</li>
-                                            <li>1 DVD contenant les photos retravaillées en haute résolution (min. 180 photos)</li>
-                                            <li>2 DVD “copies aux parents”</li>
-                                            <li>Galerie photo internet sécurisée et disponible pendant 1 an minimum.</li>
-                                            <li>Cession intégrale des droits de reproduction dans un cadre privé uniquement.</li>
-                                        </ul>
-                                        <i>prix sur demande</i>
-                                    </div>								
-                                </div><!-- .row-fluid -->
+                                                <i>prix sur demande</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- .row-fluid -->
 
-                                <div class="row-fluid">
-                                    <div class="span12 module_cont module_text_area module_medium_padding">
-                                        <h3 class="headInModule">Formule Gold</h3>
-                                        <a id="anchor3"></a>
 
-                                        <ul class="list_type1">
-                                            <li>12H de prestation le jour du mariage * (plage horaire à préciser avec les mariés)</li>
-                                            <li>Rencontre des futurs mariés avant le mariage et signature du contrat de prestation</li>
-                                            <li>La prestation comprend un photo reportage permettant de couvrir les thèmes suivants:
-                                                <ul>
-                                                    <li>préparatifs (habillage, maquillage, coiffeur)</li>
-                                                    <li>cérémonie</li>
-                                                    <li>photos de couple ou/et de groupe</li>
-                                                    <li>vin d’honneur</li>
-                                                    <li>dîner</li>
-                                                    <li>soirée dansante jusqu’à minuit maximum</li>
+
+                                    <div class="row-fluid">
+
+                                        <div class="span12 module_cont module_text_area module_medium_padding">
+                                            <img class="hidden-phone" src="{{ asset('img/gold.jpg') }}" alt="formule gold"
+                                                 style="float:left"/>
+
+                                            <div style="float: right">
+                                                <h3 class="headInModule">Formule Gold</h3>
+                                                <a id="anchor3"></a>
+
+                                                <ul class="list_type1">
+                                                    <li>12H de prestation le jour du mariage * (plage horaire à préciser
+                                                        avec les mariés)
+                                                    </li>
+                                                    <li>Rencontre des futurs mariés avant le mariage et signature du
+                                                        contrat de prestation
+                                                    </li>
+                                                    <li>La prestation comprend un photo reportage permettant de couvrir
+                                                        les thèmes suivants:
+                                                        <ul>
+                                                            <li>préparatifs (habillage, maquillage, coiffeur)</li>
+                                                            <li>cérémonie</li>
+                                                            <li>photos de couple ou/et de groupe</li>
+                                                            <li>vin d’honneur</li>
+                                                            <li>dîner</li>
+                                                            <li>soirée dansante jusqu’à minuit maximum</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Travail de post-production et de retouches</li>
+                                                    <li>1 DVD contenant les photos retravaillées en haute résolution
+                                                        (min. 180 photos) <br> ainsi qu’un diaporama en vidéo HD accompagnée
+                                                        d’une musique de fond
+                                                    </li>
+                                                    <li>2 DVD “copies aux parents”</li>
+                                                    <li>Galerie photo internet sécurisée et disponible pendant 1 an
+                                                        minimum.
+                                                    </li>
+                                                    <li>Cession intégrale des droits de reproduction dans un cadre privé
+                                                        uniquement.
+                                                    </li>
+                                                    <li>Session “Day After” de 3h avec les mariés à la date et lieu de
+                                                        leur choix.
+                                                    </li>
                                                 </ul>
-                                            </li>
-                                            <li>Travail de post-production et de retouches</li>
-                                            <li>1 DVD contenant les photos retravaillées en haute résolution (min. 180 photos) ainsi qu’un diaporama en vidéo HD accompagnée d’une musique de fond (à fournir par les mariés).</li>
-                                            <li>2 DVD “copies aux parents”</li>
-                                            <li>Galerie photo internet sécurisée et disponible pendant 1 an minimum.</li>
-                                            <li>Cession intégrale des droits de reproduction dans un cadre privé uniquement.</li>
-                                            <li>Session “Day After” de 3h avec les mariés à la date et lieu de leur choix.</li>
-                                        </ul>
-                                        <i>prix sur demande</i>
-                                    </div>								
-                                </div><!-- .row-fluid -->
+                                                <i>prix sur demande</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- .row-fluid -->
 
-                                <div class="row-fluid">
-                                    <div class="span12 module_cont module_text_area module_medium_padding">
-                                        <h3 class="headInModule">A la carte</h3>
-                                        <a id="anchor4"></a>
+                                    <div class="row-fluid">
+                                        <div class="span12 module_cont module_text_area module_medium_padding">
+                                            <h3 class="headInModule">A la carte</h3>
+                                            <a id="anchor4"></a>
 
-                                        <ul class="list_type1">
-                                            <li>Scéance engagement de 2H avec les futurs mariés à la date et lieu de leur choix.</li>
-                                            <li>Scéance “Day After” de 3h avec les mariés à la date et lieu de leur choix.</li>
-                                            <li>DVD supplémentaire</li>
-                                            <li>Heures supplémentaires de présence</li>
-                                        </ul>
-                                        <i>prix sur demande</i>
-                                    </div>								
-                                </div><!-- .row-fluid -->
+                                            <ul class="list_type1">
+                                                <li>Scéance engagement de 2H avec les futurs mariés à la date et lieu de
+                                                    leur choix.
+                                                </li>
+                                                <li>Scéance “Day After” de 3h avec les mariés à la date et lieu de leur
+                                                    choix.
+                                                </li>
+                                                <li>DVD supplémentaire</li>
+                                                <li>Heures supplémentaires de présence</li>
+                                            </ul>
+                                            <i>prix sur demande</i>
+                                        </div>
+                                    </div>
+                                    <!-- .row-fluid -->
 
-                            </div><!-- .contentarea -->
+                                </div>
+                                <!-- .contentarea -->
+                            </div>
                         </div>
-                        <div class="left-sidebar-block span3">
-                            //Sidebar Text
-                        </div><!-- .left-sidebar -->
                     </div>
-                    <div class="clear"><!-- ClearFix --></div>
-                </div><!-- .fl-container -->
-                <div class="right-sidebar-block span3">
-                    <aside class="sidebar">
-                        <div class="sidepanel widget_nav_menu">
-                            <ul class="menu">
-                                <li class="menu-item"><a href="#anchor1">Formule Bronze</a></li>
-                                <li class="menu-item"><a href="#anchor2">Formule Silver</a></li>                                    
-                                <li class="menu-item"><a href="#anchor3">Formule Gold</a></li>
-                                <li class="menu-item"><a href="#anchor4">A la carte</a></li>
-                            </ul>
-                        </div>                        
-
-                    </aside>
-                </div><!-- .right-sidebar -->
-                <div class="clear"><!-- ClearFix --></div>
+                </div>
             </div>
-        </div><!-- .container -->
-    </div><!-- .content_wrapper -->
+            <!-- .container -->
+        </div>
+        <!-- .content_wrapper -->
 
-</div><!-- .main_wrapper -->
+    </div><!-- .main_wrapper -->
 
+    <div class="header2top"></div>
 
- {% endblock %}   
+{% endblock %}

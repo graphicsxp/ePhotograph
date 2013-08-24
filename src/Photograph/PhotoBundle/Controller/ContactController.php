@@ -4,16 +4,18 @@ namespace Photograph\PhotoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Photograph\PhotoBundle\Entity\Message;
 
 class ContactController extends Controller {
 
     public function indexAction(Request $request) {
-        $defaultData = array('message' => 'Type your message here');
-        $form = $this->createFormBuilder($defaultData)
-                ->add('nom', 'text', array('required' => true))
-                ->add('email', 'email')
-                ->add('sujet', 'text')
-                ->add('message', 'textarea')                
+        $message = new Message();
+
+        $form = $this->createFormBuilder($message)
+                ->add('Name', 'text', array('required' => true))
+                ->add('Email', 'email')
+                ->add('Subject', 'text')
+                ->add('Body', 'textarea')
                 ->getForm();
 
         $form->handleRequest($request);

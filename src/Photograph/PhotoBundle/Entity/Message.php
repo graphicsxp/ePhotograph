@@ -10,6 +10,50 @@
 namespace Photograph\PhotoBundle\Entity;
 
 
-class Message {
+class Message
+{
+    protected $name;
+    protected $subject;
+    protected $body;
+    protected $email;
 
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+    public function setSubject($subject)
+    {
+        $this->subject = $subject;
+    }
+
+    public function getBody()
+    {
+        return $this->body;
+    }
+
+    public function setBody($body)
+    {
+        $this->body = $body;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
 }

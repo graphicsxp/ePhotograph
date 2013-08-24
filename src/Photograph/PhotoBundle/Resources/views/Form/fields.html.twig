@@ -12,7 +12,6 @@
 {% endblock %}
 
 {% block text_widget %}
-    {{dump(block('attributes'))}}
     <input type="text" {{ block('attributes') }} value="{{ value }}" class="field-name form_field">
 {% endblock %}
     
