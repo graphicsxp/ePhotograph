@@ -1,4 +1,4 @@
-{test
+{
     "name": "symfony/framework-standard-edition",
     "license": "MIT",
     "type": "project",
