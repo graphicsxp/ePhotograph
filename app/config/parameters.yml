@@ -13,16 +13,17 @@
 #    locale: en
 #    secret: ThisTokenIsNotSoSecretChangeIt
 
-parameters:
-    database_driver: pdo_mysql
-    database_host: 127.0.0.1
-    database_port: null
-    database_name: symfony
-    database_user: root
-    database_password: null
-    mailer_transport: gmail
-    mailer_host: ~ 
-    mailer_user: graphicsxp@gmail.com
-    mailer_password: Samuel44
-    locale: fr
-    secret: ThisTokenIsNotSoSecretChangeIt
+  parameters:
+      database_driver: pdo_mysql
+      database_host: 127.0.0.1
+      database_port: null
+      database_name: symfony
+      database_user: root
+      database_password: null
+      mailer_transport: gmail
+      mailer_host: ~
+      mailer_user: graphicsxp@gmail.com
+      mailer_password: Samuel44
+      delivery_address: graphicsxp@gmail.com
+      locale: fr
+      secret: ThisTokenIsNotSoSecretChangeIt

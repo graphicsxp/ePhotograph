@@ -12,17 +12,24 @@ class ContactController extends Controller {
         $message = new Message();
 
         $form = $this->createFormBuilder($message)
-                ->add('Name', 'text', array('required' => true))
-                ->add('Email', 'email')
-                ->add('Subject', 'text')
-                ->add('Body', 'textarea')
+                ->add('name', 'text', array('attr' => array('placeholder' => 'nom')))
+                ->add('email', 'email')
+                ->add('subject', 'text')
+                ->add('body', 'textarea')
                 ->getForm();
 
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            // data is an array with "name", "email", and "message" keys
-            $data = $form->getData();
+            $message = $form->getData();
+
+            $mail = \Swift_Message::newInstance()
+                ->setSubject($message->getSubject())
+                ->setFrom($message->getEmail())
+                ->setBody($message->getBody());
+
+            $this->get('mailer')->send($mail);
+
         }
         
         return $this->render('PhotographPhotoBundle:Contact:index.html.twig', array('form' => $form->createView()));

@@ -8,15 +8,15 @@
 {% endblock field_row %}
 
 {% block email_widget %}
-    <input type="email" {{ block('attributes') }} value="{{ value }}" class="field-email form_field">       
+    <input type="email" {{ block('widget_attributes') }} value="{{ value }}" class="field-email form_field">
 {% endblock %}
 
 {% block text_widget %}
-    <input type="text" {{ block('attributes') }} value="{{ value }}" class="field-name form_field">
+    <input type="text" {{ block('widget_attributes') }} value="{{ value }}" class="field-name form_field">
 {% endblock %}
     
 {% block textarea_widget %}
-     <textarea name="field-message" {{ block('attributes') }}  cols="45" rows="5"  class="field-message form_field">{{ value }}</textarea>
+     <textarea  {{ block('widget_attributes') }}  cols="45" rows="5"  class="field-message form_field">{{ value }}</textarea>
 {% endblock %}
     
     

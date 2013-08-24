@@ -39,13 +39,13 @@
                                         
                                         {{ form_errors(form) }}                                       
                                                 
-                                        {{ form_widget(form.Name) }}
+                                        {{ form_widget(form.name) }}
                                                 <div class="clear"></div>
-                                        {{ form_widget(form.Email, { 'attr': {'placeholder': 'email' }}) }}
+                                        {{ form_widget(form.email, { 'attr': {'placeholder': 'email' }}) }}
                                                 <div class="clear"></div>
-                                        {{ form_widget(form.Subject, { 'attr': {'placeholder': 'sujet' }}) }}
+                                        {{ form_widget(form.subject, { 'attr': {'placeholder': 'sujet' }}) }}
                                                 <div class="clear"></div>
-                                        {{ form_widget(form.Body, { 'attr': {'placeholder': 'message' }}) }}
+                                        {{ form_widget(form.body, { 'attr': {'placeholder': 'message' }}) }}
                                                 <div class="clear"></div>    
                                         <input value="envoyer votre message" type="submit"  class="feedback_go" />
                                                 <div class="ajaxanswer"></div>
