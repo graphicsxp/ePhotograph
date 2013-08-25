@@ -3,6 +3,7 @@
 namespace Photograph\PhotoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Photograph\PhotoBundle\Entity\Message;
 
@@ -10,7 +11,7 @@ class ContactController extends Controller {
 
     public function indexAction(Request $request) {
         $message = new Message();
-
+throw new Exception();
         $form = $this->createFormBuilder($message)
                 ->add('name', 'text', array('attr' => array('placeholder' => 'nom')))
                 ->add('email', 'email')
