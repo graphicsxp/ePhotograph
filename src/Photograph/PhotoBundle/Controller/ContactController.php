@@ -11,7 +11,7 @@ class ContactController extends Controller {
 
     public function indexAction(Request $request) {
         $message = new Message();
-throw new Exception();
+
         $form = $this->createFormBuilder($message)
                 ->add('name', 'text', array('attr' => array('placeholder' => 'nom')))
                 ->add('email', 'email')
