@@ -49,4 +49,8 @@ PhotographPhotoBundle_portfolio_post_architecture:
 PhotographPhotoBundle_gallery:
     pattern:  /galeries/{name}
     defaults: { _controller: PhotographPhotoBundle:Page:gallery }
-    
+
+PhotographPhotoBundle_client:
+    pattern:  /espace-client/{client}
+    defaults: { _controller: PhotographPhotoBundle:Client:index }
+

@@ -5,6 +5,11 @@
 /*------------------------------------------------------------------*/ 
 /*	2) CONTENT
 /*------------------------------------------------------------------*/
+@media only screen and (max-width: 760px) {
+    .contactcircle {
+        display:none;
+    }
+}
 .contactcircle{
 	width:180px;
 	height:180px;
@@ -28,3 +33,36 @@
 .contactcircle p.man{background:url(../img/man.png) no-repeat left top;}
 .contactcircle p.phone{background:url(../img/contact.png) no-repeat left top;}
 .contactcircle p.envelop{background:url(../img/envelop.png) no-repeat left top;}
+
+@media only screen and (max-width: 1040px) {
+    .formule img{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 459px) and (max-width: 1040px) {
+
+    .prestation {
+        width:690px;
+        margin:0 auto;
+    }
+}
+
+@media only screen and (min-width: 459px) and (max-width: 760px) {
+
+    .container {
+        width:420px;
+        margin:0 auto;
+    }
+}
+.span12 {
+    width: 100%;
+}
+
+.span9 {
+    width: 100%;
+}
+
+.span4 {
+    width: 100%;
+}

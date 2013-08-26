@@ -40,6 +40,7 @@ jQuery.fn.fs_gallery = function(fs_options) {
 		nextSlide();
 	});
 	$('.thumb_toggle a').click(function(){
+        $('.contactcircle').toggle();
 		$('.fs_title_wrapper').toggleClass('fs_hide');
 		$('.fs_thmb_viewport').toggleClass('fs_hide');
 	});
