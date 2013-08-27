@@ -35,7 +35,16 @@
 .contactcircle p.envelop{background:url(../img/envelop.png) no-repeat left top;}
 
 @media only screen and (max-width: 1040px) {
-    .formule img{
+    .formule_large{
+        display: none;
+    }
+    .formule_small{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1040px) {
+    .formule_small{
         display: none;
     }
 }
