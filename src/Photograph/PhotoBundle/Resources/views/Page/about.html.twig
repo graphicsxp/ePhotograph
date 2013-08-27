@@ -22,6 +22,12 @@
                                         <img alt="" src="img/pictures/about1.jpg">
                                     </div>
                                     <div class="span8 module_cont module_text_area">
+                                        <blockquote>
+                                            <p>
+                                            "Une photographie, c’est un fragment de temps qui ne reviendra pas."
+                                            <div class="author">Martine Franck</div>
+                                            </p>
+                                        </blockquote>
                                         <p>Photographe passionné depuis quelques années, c’est d’abord par la photographie de paysage que j’ai développé ma maîtrise et ma connaissance du métier.</p>
                                         <p>Au-delà de l’aspect purement technique, le paysage demande avant tout beaucoup de patience. Il ne faut pas avoir peur de revenir plusieurs fois à un même endroit et y rester pendant de longues heures afin d’obtenir la lumière la plus propice.</p>
 
@@ -49,20 +55,21 @@
                                             <div class="promo_text_block span12">
                                                 <h3>Samuel Berthelot</h3>
                                                 <h6>Photographe de mariage - Luxembourg - Alsace-Lorraine - Belgique</h6>
+                                                <div class="widget_flickr">
+                                                    <div class="flickr_widget_wrapper">
+                                                        <script src="http://www.flickr.com/badge_code_v2.gne?count=12&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=8791813@N03"></script>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div><!--.module_cont -->
                                     <div class="clear"><!-- ClearFIX --></div>
                                 </div><!-- .row-fluid -->
 
-
                                 <div class="row-fluid">
                                     <div class="span8 module_cont module_text_area">
                                         <div class="bg_title"><h3 class="headInModule">mon matériel</h3></div>
-                                        <blockquote><p> Mauvais ouvrier ne trouve jamais bon outil.</p></blockquote>
-                                        <br>
-                                        <p>Certes. Il n’empêche que pour obtenir des clichés de qualité que vous pourrez ensuite imprimer et agrandir, il est important d’avoir du matériel de qualité professionnelle.</p>
-                                        <p>Je travail exclusivement avec du matériel de la marque Canon:</p>
+                                        <p>Je travail exclusivement avec du matériel professionnel de la marque Canon:</p>
                                         <ul class="list_type1">
                                             <li>Boitier 5D Mk II  ( + boitier 450D en backup)</li>
                                             <li>Objectifs:
@@ -78,7 +85,7 @@
                                         </ul>
                                     </div>
                                     <div class="span4 module_cont module_text_area">
-                                        <img alt="" src="img/pictures/about2.jpg">
+                                        <a target="_blank" href="http://www.canon.com/"> <img alt="" src="{{ asset('img/canon.gif')}}" alt="Canon"></a>
                                     </div>
                                 </div><!-- .row-fluid -->
 
@@ -102,3 +109,11 @@
 </div><!-- .main_wrapper -->
 <div class="header2top"></div>
 {% endblock %}
+
+ {% block javascripts %}
+<script>
+    $(document).ready(function(){
+        $(".flickr_widget_wrapper a").attr('target','_blank');
+    });
+</script>
+ {% endblock %}
