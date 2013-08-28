@@ -27,6 +27,7 @@ class ContactController extends Controller {
             $mail = \Swift_Message::newInstance()
                 ->setSubject($message->getSubject())
                 ->setFrom($message->getEmail())
+                ->setTo("graphicsxp@gmail.com")
                 ->setBody($message->getBody());
 
             $this->get('mailer')->send($mail);
