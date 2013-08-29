@@ -21,9 +21,10 @@ parameters:
       database_user: root
       database_password: null
       mailer_transport: gmail
-      mailer_host: ~
+      mailer_host: smtp.gmail.com
       mailer_user: graphicsxp@gmail.com
       mailer_password: Samuel44
       delivery_address: graphicsxp@gmail.com
+      mailer_encryption: ssl
       locale: fr
       secret: ThisTokenIsNotSoSecretChangeIt

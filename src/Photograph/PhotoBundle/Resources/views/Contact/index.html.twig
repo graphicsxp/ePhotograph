@@ -35,7 +35,7 @@
                                     </div>
 
                                     <div class="span8 module_cont module_feedback_form module_small_padding1">
-                                        <form action="{{ path('PhotographPhotoBundle_contact') }}" method="post" class="feedback_form" >
+                                        <form id="myform" action="{{ path('PhotographPhotoBundle_contact_send') }}" method="post" class="feedback_form" >
                                         
                                         {{ form_errors(form) }}                                       
                                                 
@@ -72,4 +72,29 @@
     </div>
 
     <div class="header2top"></div>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    $.ready(function(){
+       $("#myform").submit(function(){
+           var myForm = $("#myform");
+
+           $.post(myForm.attr("action"), {
+               type: "POST",
+               data: myForm.serialize(),
+               cache: false
+           }, function(data){
+              if (data.responseCode === 200){
+
+              } else if (data.responseCode === 400){
+
+              }else{
+                  alert('bad response');
+              }
+           });
+       });
+
+    });
+</script>
 {% endblock %}
