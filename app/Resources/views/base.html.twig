@@ -22,22 +22,25 @@
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        {% block stylesheets %}
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,400italic,600italic,700italic' rel='stylesheet' type='text/css'> 
-            {% stylesheets
-                'css/bootstrap.css'
-                'css/theme.css'
-                'css/plugins.css'
-                'css/responsive.css'
-                'css/theme_settings.css'
-                'css/skin.css'
-                'css/color_theme.css'
-                'css/fs_gallery.css'
-                'css/custom.css'
-                filter='cssrewrite'        
-            %}
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+        {% stylesheets
+        'css/bootstrap.css'
+        'css/theme.css'
+        'css/plugins.css'
+        'css/responsive.css'
+        'css/theme_settings.css'
+        'css/skin.css'
+        'css/color_theme.css'
+        'css/fs_gallery.css'
+        'css/custom.css'
+        filter='cssrewrite'
+        %}
         <link rel="stylesheet" type="text/css" href="{{ asset_url }}" >
-            {% endstylesheets %} 
+        {% endstylesheets %}
+
+        {% block stylesheets %}
+
         {% endblock %}
 
         <!--[if IE 8 ]>
