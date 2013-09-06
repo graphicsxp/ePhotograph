@@ -31,7 +31,7 @@
                                     <div class="span4 module_cont module_contact_info module_small_padding1">                                        	
                                         <p>Téléphone fixe: +352 27996506</p>
                                         <p>Téléphone portable: +352 691542795</p>
-                                        <p>Email: <a href="mailto:">samuelberthelot@gmail.com</a></p>
+                                        <p>Email: <a href="mailto:samuelberthelot@gmail.com">samuelberthelot@gmail.com</a></p>
 
                                         <div class="module_contact_icons module_small_padding">
                                             <a href="#" class="ico_socialize_facebook1 ico_socialize type1"></a>
@@ -79,8 +79,9 @@
 {% endblock %}
 
 {% block javascripts %}
-<script>
+<script type="text/javascript">
     $.ready(function(){
+        debugger
        $("#myform").submit(function(){
            var myForm = $("#myform");
 
