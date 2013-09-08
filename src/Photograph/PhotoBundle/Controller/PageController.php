@@ -4,6 +4,7 @@ namespace Photograph\PhotoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Finder\Finder;
+use Photograph\PhotoBundle\Document;
 
 
 class PageController extends Controller {
@@ -15,6 +16,10 @@ class PageController extends Controller {
     public function portfolioAction($name) {
         switch ($name) {
             case 'angelique-et-pierre':
+                $wedding = $this->get('doctrine_mongodb')
+                    ->getRepository('Photograph\PhotoBundle\Document\Wedding')
+                    ->findBy(array('name' => $name))->toArray();
+
                 return $this->render('PhotographPhotoBundle:Page:portfolio-post-angelique-et-pierre.html.twig');
                 break;
             case 'maud-et-fabrice':

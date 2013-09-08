@@ -5,7 +5,7 @@ namespace Photograph\PhotoBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\Request;
-use Photograph\PhotoBundle\Entity\Message;
+use Photograph\PhotoBundle\Document\Message;
 
 class ContactController extends Controller {
 
@@ -22,8 +22,15 @@ class ContactController extends Controller {
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+
             $message = $form->getData();
 
+            //save message in mongodb
+            $dm = $this->get('doctrine_mongodb')->getManager();
+            $dm->persist($message);
+            $dm->flush();
+
+            //create mail and send it
             $mail = \Swift_Message::newInstance()
                 ->setSubject($message->getSubject())
                 ->setFrom($message->getEmail())
