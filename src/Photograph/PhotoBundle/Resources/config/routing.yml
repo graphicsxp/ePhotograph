@@ -26,26 +26,14 @@ PhotographPhotoBundle_sitemap:
     pattern:  /sitemap
     defaults: { _controller: PhotographPhotoBundle:Page:sitemap }
     
-PhotographPhotoBundle_portfolio_post_angelique_et_pierre:
-    pattern:  /portfolio/mariage/angelique-et-pierre
-    defaults: { _controller: PhotographPhotoBundle:Page:portfolio, name: 'angelique-et-pierre' }
-    
-PhotographPhotoBundle_portfolio_post_maud_et_fabrice:
-    pattern:  /portfolio/mariage/maud-et-fabrice
-    defaults: { _controller: PhotographPhotoBundle:Page:portfolio, name: 'maud-et-fabrice' }
-    
-PhotographPhotoBundle_portfolio_post_landscapes:
-    pattern:  /portfolio/paysages
-    defaults: { _controller: PhotographPhotoBundle:Page:portfolio, name: 'paysages' }
-    
-PhotographPhotoBundle_portfolio_post_portraits:
-    pattern:  /portfolio/portraits
-    defaults: { _controller: PhotographPhotoBundle:Page:portfolio, name: 'portraits' }
-    
-PhotographPhotoBundle_portfolio_post_architecture:
-    pattern:  /portfolio/architecture
-    defaults: { _controller: PhotographPhotoBundle:Page:architecture, name: 'architecture' }
-    
+PhotographPhotoBundle_portfolio_wedding_post:
+    pattern:  /portfolio/mariage/{name}
+    defaults: { _controller: PhotographPhotoBundle:Page:portfolio}
+
+PhotographPhotoBundle_portfolio_post:
+        pattern:  /portfolio/{name}
+        defaults: { _controller: PhotographPhotoBundle:Page:portfolio}
+
 PhotographPhotoBundle_gallery:
     pattern:  /galeries/{name}
     defaults: { _controller: PhotographPhotoBundle:Page:gallery }

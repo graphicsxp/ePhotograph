@@ -1,15 +1,16 @@
 {% extends '::base.html.twig' %}
 
 {% block head %}
-    <title>Samuel Berthelot Photographie - Mariage d'Angélique et Pierre</title>
-    <meta name="description" content="La galerie photo du mariage d'Angélique et Pierre"/>
+    <title>Samuel Berthelot Photographie - {{ post.getTitle() }}</title>
+    <meta name="description" content="La galerie photo du mariage - {{ post.getTitle() }}"/>
 {% endblock %}
 
 {% block body %}
 
+
 <div class="fullscreen_block">
     <div class="fullscreen_title">
-        <h1>Angélique et Pierre</h1>
+        <h1>{{ post.getTitle() }}</h1>
         <a href="javascript:history.back()" class="btn_close"></a>
         <!--<a href="#" class="btn_next"></a>
         <a href="#" class="btn_prev"></a>-->
@@ -19,9 +20,9 @@
         <div class="featured_slider_wrapper fullscreen_container">
             <a href="javascript:void(0)" class="featured_prev"></a><a href="javascript:void(0)" class="featured_next"></a>
             <ul class="featured_slider-list">
-                <li><img src="{{asset('img/portfoliopost/angelique_et_pierre/post01.jpg')}}" alt="mariage pierre et angélique" /></li>
-                <li><img src="{{asset('img/portfoliopost/angelique_et_pierre/post02.jpg')}}" alt="mariage pierre et angélique"  /></li>
-                <li><img src="{{asset('img/portfoliopost/angelique_et_pierre/post03.jpg')}}" alt="mariage pierre et angélique"  /></li>                
+                <li><img src="{{asset('img/portfoliopost/' ~  post.getName()|replace({'-': '_'})  ~  '/post01.jpg')}}" alt="Mariage {{ post.getTitle() }}" /></li>
+                <li><img src="{{asset('img/portfoliopost/' ~  post.getName()|replace({'-': '_'})  ~  '/post02.jpg')}}" alt="Mariage {{ post.getTitle() }}"  /></li>
+                <li><img src="{{asset('img/portfoliopost/' ~  post.getName()|replace({'-': '_'})  ~  '/post03.jpg')}}" alt="Mariage {{ post.getTitle() }}"  /></li>
             </ul>
         </div>
     </div><!-- .fullscreen_content_wrapper -->
@@ -31,26 +32,31 @@
         <div class="fullscreen_content_padding">
             <div class="row-fluid">
                 <div class="span12 module_cont module_fs_meta module_none_padding">                
-                    <p><span>Lieu:</span>Strasbourg</p>
-                    <p><span>Prestation:</span> Cérémonie, Vin d'honneur, Soirée, "Day After"     </p>                 
+                    <p><span>Lieu:</span> {{ post.getLocation() }}</p>
+
+                    {% if  (post.getWork() != null ) %}
+                        <p><span>Prestation</span> {{ post.getWork() }}</p>
+                   {% endif %}
                 </div>								
             </div><!-- .row-fluid -->
 
             <div class="row-fluid">
                 <div class="span12 module_cont module_text_area module_small_padding">
-                    <p>Angélique et Pierre forment un couple plein d'humour et de tendresse avec qui nous avons passé un merveilleux moment.</p>
-                    <a href="{{ path('PhotographPhotoBundle_gallery', {'name': 'angelique-et-pierre'}) }}">voir la galerie complète</a>
+                    <p>{{ post.getDescription() | raw }}.</p>
+                    <a href="{{ path('PhotographPhotoBundle_gallery', {'name': post.getName() }) }}">voir la galerie complète</a>
                 </div>								
             </div><!-- .row-fluid -->
 
+            {% if  (post.getWork() != null ) %}
             <div class="row-fluid">
                 <div class="span12 module_cont module_text_area module_small_padding">
                     <blockquote>
-                        <p>Nous avons choisi Samuel pour faire les photos de notre mariage et une séance de photos de couple quelques semaines plus tard. Très sympa, très pro, il a su capturer des moments magiques du jour J sans jamais se montrer intrusif. Discret et efficace, les photos du mariage et de la soirée sont magnifiques. Quant aux photos de couples, Samuel a su s'adapter à nos demandes particulières et a improvisé de superbes idées originales en fonction des lieux qu'on lui a présenté. N’hésitez plus !</p>
-                        <div class="author">Angélique et Pierre</div>
+                        <p>{{ post.getQuote() }}</p>
+                        <div class="author">{{ post.getTitle() }}</div>
                     </blockquote>
                 </div>
             </div><!-- .row-fluid -->
+            {% endif %}
 
         </div><!-- .fullscreen_content_padding -->
     </div><!-- .fullscreen_content -->

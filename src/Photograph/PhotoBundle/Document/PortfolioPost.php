@@ -14,7 +14,7 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 /**
  * @MongoDB\Document
  */
-class Wedding {
+class PortfolioPost {
 
     /**
      * @MongoDB\Id

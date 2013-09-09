@@ -71,10 +71,9 @@
                         <li class="current-menu-parent"><a href="{{ path('PhotographPhotoBundle_home') }}">ACCUEIL</a> </li>
                         <li><a href="{{ path('PhotographPhotoBundle_portfolio') }}">PORTFOLIO</a>
                           <ul class="sub-menu">
-                                <li><a href="{{ path('PhotographPhotoBundle_portfolio_post_angelique_et_pierre') }}">Angélique et Pierre</a></li>                                
-                                <li><a href="{{ path('PhotographPhotoBundle_portfolio_post_maud_et_fabrice') }}">Maud et Fabrice</a></li>   
-                                <li><a href="{{ path('PhotographPhotoBundle_portfolio_post_landscapes') }}">Paysages</a></li>   
-                               <!-- <li><a href="{{ path('PhotographPhotoBundle_portfolio_post_portraits') }}">Portraits</a></li>   -->
+                                <li><a href="{{ path('PhotographPhotoBundle_portfolio_wedding_post', {'name': 'angelique-et-pierre' }) }}">Angélique et Pierre</a></li>
+                                <li><a href="{{ path('PhotographPhotoBundle_portfolio_wedding_post', {'name': 'maud-et-fabrice' }) }}">Maud et Fabrice</a></li>
+                                <li><a href="{{ path('PhotographPhotoBundle_portfolio_post', {'name': 'paysages' }) }}">Paysages</a></li>
                             </ul>
                         </li>                        
                         <li><a href="{{ path('PhotographPhotoBundle_prestations') }}">PRESTATIONS</a></li>
