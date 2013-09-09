@@ -8,7 +8,7 @@
 {% block body %}
 
 
-<div class="fullscreen_block">
+    <div class="fullscreen_block">
     <div class="fullscreen_title">
         <h1>{{ post.getTitle() }}</h1>
         <a href="javascript:history.back()" class="btn_close"></a>
@@ -18,49 +18,61 @@
 
     <div class="fullscreen_content_wrapper">
         <div class="featured_slider_wrapper fullscreen_container">
-            <a href="javascript:void(0)" class="featured_prev"></a><a href="javascript:void(0)" class="featured_next"></a>
+            <a href="javascript:void(0)" class="featured_prev"></a><a href="javascript:void(0)"
+                                                                      class="featured_next"></a>
             <ul class="featured_slider-list">
-                <li><img src="{{asset('img/portfoliopost/' ~  post.getName()|replace({'-': '_'})  ~  '/post01.jpg')}}" alt="Mariage {{ post.getTitle() }}" /></li>
-                <li><img src="{{asset('img/portfoliopost/' ~  post.getName()|replace({'-': '_'})  ~  '/post02.jpg')}}" alt="Mariage {{ post.getTitle() }}"  /></li>
-                <li><img src="{{asset('img/portfoliopost/' ~  post.getName()|replace({'-': '_'})  ~  '/post03.jpg')}}" alt="Mariage {{ post.getTitle() }}"  /></li>
+                <li><img src="{{ asset('img/portfoliopost/' ~  post.getName()|replace({'-': '_'})  ~  '/post01.jpg') }}"
+                         alt="Mariage {{ post.getTitle() }}"/></li>
+                <li><img src="{{ asset('img/portfoliopost/' ~  post.getName()|replace({'-': '_'})  ~  '/post02.jpg') }}"
+                         alt="Mariage {{ post.getTitle() }}"/></li>
+                <li><img src="{{ asset('img/portfoliopost/' ~  post.getName()|replace({'-': '_'})  ~  '/post03.jpg') }}"
+                         alt="Mariage {{ post.getTitle() }}"/></li>
             </ul>
         </div>
-    </div><!-- .fullscreen_content_wrapper -->
+    </div>
+    <!-- .fullscreen_content_wrapper -->
 
     <div class="fullscreen_content">
-        <a href="javascript:void(0)" class="content_toggle"><span class="collapse">Cacher</span><span class="show">Plus d'info</span></a>        
+        <a href="javascript:void(0)" class="content_toggle"><span class="collapse">Cacher</span><span class="show">Plus d'info</span></a>
+
         <div class="fullscreen_content_padding">
             <div class="row-fluid">
-                <div class="span12 module_cont module_fs_meta module_none_padding">                
+                <div class="span12 module_cont module_fs_meta module_none_padding">
                     <p><span>Lieu:</span> {{ post.getLocation() }}</p>
 
                     {% if  (post.getWork() != null ) %}
                         <p><span>Prestation</span> {{ post.getWork() }}</p>
-                   {% endif %}
-                </div>								
-            </div><!-- .row-fluid -->
+                    {% endif %}
+                </div>
+            </div>
+            <!-- .row-fluid -->
 
             <div class="row-fluid">
                 <div class="span12 module_cont module_text_area module_small_padding">
-                    <p>{{ post.getDescription() | raw }}.</p>
-                    <a href="{{ path('PhotographPhotoBundle_gallery', {'name': post.getName() }) }}">voir la galerie complète</a>
-                </div>								
-            </div><!-- .row-fluid -->
+                    <p>{{ post.getDescription() | raw }}</p>
+                    <a href="{{ path('PhotographPhotoBundle_gallery', {'name': post.getName() }) }}">voir la galerie
+                        complète</a>
+                </div>
+            </div>
+            <!-- .row-fluid -->
 
             {% if  (post.getWork() != null ) %}
-            <div class="row-fluid">
-                <div class="span12 module_cont module_text_area module_small_padding">
-                    <blockquote>
-                        <p>{{ post.getQuote() }}</p>
-                        <div class="author">{{ post.getTitle() }}</div>
-                    </blockquote>
-                </div>
-            </div><!-- .row-fluid -->
+                <div class="row-fluid">
+                    <div class="span12 module_cont module_text_area module_small_padding">
+                        <blockquote>
+                            <p>{{ post.getQuote() }}</p>
+
+                            <div class="author">{{ post.getTitle() }}</div>
+                        </blockquote>
+                    </div>
+                </div><!-- .row-fluid -->
             {% endif %}
 
-        </div><!-- .fullscreen_content_padding -->
-    </div><!-- .fullscreen_content -->
+        </div>
+        <!-- .fullscreen_content_padding -->
+    </div>
+    <!-- .fullscreen_content -->
 
 
     <div class="header2top"></div>
-    {% endblock %}
+{% endblock %}
