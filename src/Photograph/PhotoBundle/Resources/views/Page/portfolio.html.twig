@@ -6,141 +6,157 @@
 {% endblock %}
 
 {% block body %}
-<div class="main_wrapper">
-    <!-- C O N T E N T -->
-    <div class="content_wrapper">
-        <div class="page_title_block">
+    <div class="main_wrapper">
+        <!-- C O N T E N T -->
+        <div class="content_wrapper">
+            <div class="page_title_block">
+                <div class="container">
+                    <h1 class="title">Portfolio</h1>
+                </div>
+            </div>
             <div class="container">
-                <h1 class="title">Portfolio</h1>
-            </div>
-        </div>
-        <div class="container">	            
-            <div class="content_block no-sidebar row">
-                <div class="fl-container span12">
-                    <div class="row">
-                        <div class="posts-block span12">
-                            <div class="contentarea">
+                <div class="content_block no-sidebar row">
+                    <div class="fl-container span12">
+                        <div class="row">
+                            <div class="posts-block span12">
+                                <div class="contentarea">
 
-                                <div class="row-fluid">
-                                    <div class="span12 module_cont module_portfolio">
-                                        <div class="filter_block">
-                                            <div class="filter_navigation">
-                                                <ul id="options" class="splitter">
-                                                    <li>
-                                                        <ul data-option-key="filter" class="optionset">
-                                                            <li class="selected"><a data-option-value="*" href="#filter">Tous</a></li>
-                                                            <li><a title="Voir toutes les galeries Mariage" data-option-value=".wedding" href="#filter">Mariages</a></li>
-<!--                                                            <li><a title="Voir toutes les galeries Portrait" data-option-value=".portrait" href="#filter">Portraits</a></li>-->
-                                                            <li><a title="Voir toutes les galeries Paysage" data-option-value=".landscape" href="#filter">Paysages</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div><!-- .filter_navigation -->
-                                        </div><!-- .filter_block -->
-
-                                        <div class="portfolio_block image-grid columns2" id="list">
-
-                                            <div data-category="wedding" class="wedding element">
-                                                <div class="filter_img gallery_item">
-                                                    <a href="{{path('PhotographPhotoBundle_portfolio_wedding_post',  {'name': 'angelique-et-pierre' }) }}">
-                                                        <img src="{{asset('img/portfolio/portfolio1-1.jpg')}}" alt="" width="570" height="444">
-                                                        <div class="gallery_fadder"></div>
-                                                        <div class="ico_gallery"></div><!-- .ico_gallery -->
-                                                        <div class="gallery_descr">
-                                                            <h6 class="gallery_title">Angélique et Pierre</h6>
-                                                            <p>Strasbourg</p>
-                                                        </div>
-                                                    </a>
+                                    <div class="row-fluid">
+                                        <div class="span12 module_cont module_portfolio">
+                                            <div class="filter_block">
+                                                <div class="filter_navigation">
+                                                    <ul id="options" class="splitter">
+                                                        <li>
+                                                            <ul data-option-key="filter" class="optionset">
+                                                                <li class="selected"><a data-option-value="*"
+                                                                                        href="#filter">Tous</a></li>
+                                                                <li><a title="Voir toutes les galeries Mariage"
+                                                                       data-option-value=".wedding" href="#filter">Mariages</a>
+                                                                </li>
+                                                                <!--                                                            <li><a title="Voir toutes les galeries Portrait" data-option-value=".portrait" href="#filter">Portraits</a></li>-->
+                                                                <li><a title="Voir toutes les galeries Paysage"
+                                                                       data-option-value=".landscape" href="#filter">Paysages</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                            </div><!-- .element -->
+                                                <!-- .filter_navigation -->
+                                            </div>
+                                            <!-- .filter_block -->
 
-                                            <div data-category="wedding" class="wedding element">
-                                                <div class="filter_img gallery_item">
-                                                    <a href="{{path('PhotographPhotoBundle_portfolio_wedding_post', {'name': 'maud-et-fabrice' }) }}">
-                                                        <img src="{{asset('img/portfolio/portfolio2-1.jpg')}}" alt="" width="570" height="444">
-                                                        <div class="gallery_fadder"></div>
-                                                        <div class="ico_gallery"></div><!-- .ico_gallery -->
-                                                        <div class="gallery_descr">
-                                                            <h6 class="gallery_title">Maud et Fabrice</h6>
-                                                            <p>Grenoble</p>
-                                                        </div>
-                                                    </a>
+                                            <div class="portfolio_block image-grid columns2" id="list">
+
+                                                <div data-category="wedding" class="wedding element">
+                                                    <div class="filter_img gallery_item">
+                                                        <a href="{{ path('PhotographPhotoBundle_portfolio_wedding_post',  {'name': 'angelique-et-pierre' }) }}">
+                                                            <img src="{{ asset('img/portfolio/portfolio1-1.jpg') }}"
+                                                                 alt="" width="570" height="444">
+
+                                                            <div class="gallery_fadder"></div>
+                                                            <div class="ico_gallery"></div>
+                                                            <!-- .ico_gallery -->
+                                                            <div class="gallery_descr">
+                                                                <h6 class="gallery_title">Angélique et Pierre</h6>
+
+                                                                <p>Strasbourg</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div><!-- .element -->
+                                                <!-- .element -->
 
-                                            <div data-category="landscape" class="landscape element">
-                                                <div class="filter_img gallery_item">
-                                                    <a href="{{path('PhotographPhotoBundle_portfolio_post', {'name': 'paysages' }') }}">
-                                                        <img src="{{asset('img/portfolio/portfolio3-1.jpg')}}" alt="" width="570" height="444">
-                                                        <div class="gallery_fadder"></div>
-                                                        <div class="ico_gallery"></div><!-- .ico_gallery -->
-                                                        <div class="gallery_descr">
-                                                            <h6 class="gallery_title">Paysages</h6>
-                                                            <p>un aperçu de mon travail</p>
-                                                        </div>
-                                                    </a>
+                                                <div data-category="wedding" class="wedding element">
+                                                    <div class="filter_img gallery_item">
+                                                        <a href="{{ path('PhotographPhotoBundle_portfolio_wedding_post', {'name': 'maud-et-fabrice' }) }}">
+                                                            <img src="{{ asset('img/portfolio/portfolio2-1.jpg') }}"
+                                                                 alt="" width="570" height="444">
+
+                                                            <div class="gallery_fadder"></div>
+                                                            <div class="ico_gallery"></div>
+                                                            <!-- .ico_gallery -->
+                                                            <div class="gallery_descr">
+                                                                <h6 class="gallery_title">Maud et Fabrice</h6>
+
+                                                                <p>Grenoble</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div><!-- .element -->
+                                                <!-- .element -->
 
-                                           <!-- <div data-category="portrait" class="portrait element">
-                                                <div class="filter_img gallery_item">
-                                                    <a href="{{path('PhotographPhotoBundle_portfolio_post_portraits') }}">
-                                                        <img src="{{asset('img/portfolio/portfolio4-1.jpg')}}" alt="" width="570" height="444">
-                                                        <div class="gallery_fadder"></div>
-                                                        <div class="ico_gallery"></div>
-                                                        <div class="gallery_descr">
-                                                            <h6 class="gallery_title">Portrait</h6>
-                                                            <p>description.</p>
-                                                        </div>
-                                                    </a>
+                                                <div data-category="landscape" class="landscape element">
+                                                    <div class="filter_img gallery_item">
+                                                        <a href="{{ path('PhotographPhotoBundle_portfolio_post', {'name': 'paysages' }) }}">
+                                                            <img src="{{ asset('img/portfolio/portfolio3-1.jpg') }}"
+                                                                 alt="" width="570" height="444">
+
+                                                            <div class="gallery_fadder"></div>
+                                                            <div class="ico_gallery"></div>
+                                                            <!-- .ico_gallery -->
+                                                            <div class="gallery_descr">
+                                                                <h6 class="gallery_title">Paysages</h6>
+
+                                                                <p>un aperçu de mon travail</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>-->
+                                                <!-- .element -->
 
-                                        </div><!-- .portfolio_block -->
-                                        <div class="clear"></div>
-                                        <!--<div class="load_more_cont"><a href="javascript:void(0)" class="btn_load_more get_portfolio_works_btn shortcode_button btn_normal btn_type1">Voir plus !<span></span></a></div>-->
+                                            </div>
+                                            <!-- .portfolio_block -->
+                                            <div class="clear"></div>
+                                            <!--<div class="load_more_cont"><a href="javascript:void(0)" class="btn_load_more get_portfolio_works_btn shortcode_button btn_normal btn_type1">Voir plus !<span></span></a></div>-->
 
-                                    </div><!-- .module_portfolio -->
-                                </div><!-- .row-fluid --> 
+                                        </div>
+                                        <!-- .module_portfolio -->
+                                    </div>
+                                    <!-- .row-fluid -->
 
-                            </div><!-- .contentarea -->
+                                </div>
+                                <!-- .contentarea -->
+                            </div>
+                            <div class="left-sidebar-block span3">
+                                //Sidebar Text
+                            </div>
+                            <!-- .left-sidebar -->
                         </div>
-                        <div class="left-sidebar-block span3">
-                            //Sidebar Text
-                        </div><!-- .left-sidebar -->
+                        <div class="clear"><!-- ClearFix --></div>
                     </div>
+                    <!-- .fl-container -->
+                    <div class="right-sidebar-block span3">
+                        <aside class="sidebar">
+
+                        </aside>
+                    </div>
+                    <!-- .right-sidebar -->
                     <div class="clear"><!-- ClearFix --></div>
-                </div><!-- .fl-container -->
-                <div class="right-sidebar-block span3">
-                    <aside class="sidebar">
-
-                    </aside>
-                </div><!-- .right-sidebar -->
-                <div class="clear"><!-- ClearFix --></div>
+                </div>
             </div>
-        </div><!-- .container -->
-    </div><!-- .content_wrapper -->
+            <!-- .container -->
+        </div>
+        <!-- .content_wrapper -->
 
-</div><!-- .main_wrapper -->
+    </div><!-- .main_wrapper -->
 
-<div class="header2top"></div>
-    {% endblock %}
+    <div class="header2top"></div>
+{% endblock %}
 
     {% block javascripts %}
         <script>
-        //<![CDATA[
-        items_set = [//Gallery Data
+            //<![CDATA[
+            items_set = [//Gallery Data
 
-            {src: 'img/portfolio/portfolio1-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Fusce pellentesque laoreet quam ac rutrum.', description: 'Nunc lobortis odio et mauris iaculis id sollicitudin eros imperdiet. Etiam dapibus convallis dui, a blandit neque scelerisque a. Praesent accumsan, leo non placerat tincidunt.'},
-            {src: 'img/portfolio/portfolio2-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Vestibulum faucibus velit ut sem adipiscing ac.', description: 'Nunc tristique urna vitae eros aliquam consectetur. Nullam porttitor auctor felis, vitae laoreet nisi scelerisque sed. Quisque congue luctus massa pellentesque rutrum.'},
-            {src: 'img/portfolio/portfolio3-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'landscape', title: 'Aliquam eleifend purus eget mauris fermentum.', description: 'Maecenas lobortis justo vitae odio aliquam vel gravida ipsum bibendum. Sed ac orci quam, eu tempor odio. Duis elementum lorem vitae urna adipiscing.'},
-            {src: 'img/portfolio/portfolio4-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'portrait', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', description: 'Aliquam et dolor a dui imperdiet luctus. Etiam ultrices imperdiet nibh, at congue nunc accumsan quis. Vestibulum rutrum mattis enim, id consequat purus blandit facilisis.'}
-        ];
-        $('#list').portfolio_addon({
-            type: 1,
-            load_count: 2,
-            items: items_set
-        });
-        //]]
+                {src: 'img/portfolio/portfolio1-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Fusce pellentesque laoreet quam ac rutrum.', description: 'Nunc lobortis odio et mauris iaculis id sollicitudin eros imperdiet. Etiam dapibus convallis dui, a blandit neque scelerisque a. Praesent accumsan, leo non placerat tincidunt.'},
+                {src: 'img/portfolio/portfolio2-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Vestibulum faucibus velit ut sem adipiscing ac.', description: 'Nunc tristique urna vitae eros aliquam consectetur. Nullam porttitor auctor felis, vitae laoreet nisi scelerisque sed. Quisque congue luctus massa pellentesque rutrum.'},
+                {src: 'img/portfolio/portfolio3-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'landscape', title: 'Aliquam eleifend purus eget mauris fermentum.', description: 'Maecenas lobortis justo vitae odio aliquam vel gravida ipsum bibendum. Sed ac orci quam, eu tempor odio. Duis elementum lorem vitae urna adipiscing.'},
+            ];
+            $('#list').portfolio_addon({
+                type: 1,
+                load_count: 2,
+                items: items_set
+            });
+            //]]
         </script>
-   {% endblock %}
+    {% endblock %}
