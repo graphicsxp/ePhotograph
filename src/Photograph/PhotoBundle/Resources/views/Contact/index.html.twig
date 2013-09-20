@@ -7,99 +7,116 @@
 {% endblock %}
 
 {% block body %}
-<div class="main_wrapper">
-    <div class="content_wrapper">
-        <div class="page_title_block">
-            <div class="container">
-                <h1 class="title">Contact</h1>                    
+    <div class="main_wrapper">
+        <div class="content_wrapper">
+            <div class="page_title_block">
+                <div class="container">
+                    <h1 class="title">Contact</h1>
+                </div>
             </div>
-        </div>
-        <div class="container">	            
-            <div class="content_block no-sidebar row">
-                <div class="fl-container span12">
-                    <div class="row">
-                        <div class="posts-block span12">
-                            <div class="contentarea">
+            <div class="container">
+                <div class="content_block no-sidebar row">
+                    <div class="fl-container span12">
+                        <div class="row">
+                            <div class="posts-block span12">
+                                <div class="contentarea">
 
-                                <div class="row-fluid">
-                                    <div class="span12 module_cont module_text_area">
-                                        <p>N'hésitez pas à prendre contact avec moi directement par téléphone ou en remplissant le formulaire ci-dessous. Je répondrai à vos questions dans les 24H.</p>
-                                    </div>								
-                                </div><!-- .row-fluid -->
-
-                                <div class="row-fluid">
-                                    <div class="span4 module_cont module_contact_info module_small_padding1">                                        	
-                                        <p>Téléphone fixe: +352 27996506</p>
-                                        <p>Téléphone portable: +352 691542795</p>
-                                        <p>Email: <a href="mailto:samuelberthelot@gmail.com">samuelberthelot@gmail.com</a></p>
-
-                                        <div class="module_contact_icons module_small_padding">
-                                            <a href="#" class="ico_socialize_facebook1 ico_socialize type1"></a>
+                                    <div class="row-fluid">
+                                        <div class="span12 module_cont module_text_area">
+                                            <p>N'hésitez pas à prendre contact avec moi directement par téléphone ou en
+                                                remplissant le formulaire ci-dessous. Je répondrai à vos questions dans
+                                                les 24H.</p>
                                         </div>
                                     </div>
+                                    <!-- .row-fluid -->
 
-                                    <div class="span8 module_cont module_feedback_form module_small_padding1">
-                                        <form id="myform" action="{{ path('PhotographPhotoBundle_contact') }}" method="post" class="feedback_form" >
-                                        
-                                        {{ form_errors(form) }}                                       
-                                                
-                                        {{ form_widget(form.name) }}
-                                                <div class="clear"></div>
-                                        {{ form_widget(form.email, { 'attr': {'placeholder': 'email' }}) }}
-                                                <div class="clear"></div>
-                                        {{ form_widget(form.subject, { 'attr': {'placeholder': 'sujet' }}) }}
-                                                <div class="clear"></div>
-                                        {{ form_widget(form.body, { 'attr': {'placeholder': 'message' }}) }}
-                                                <div class="clear"></div>    
-                                        <input value="envoyer votre message" type="submit"  class="feedback_go" />
-                                                <div class="ajaxanswer"></div>
-                                           {{ form_end(form) }}
+                                    <div class="row-fluid">
+                                        <div class="span4 module_cont module_contact_info module_small_padding1">
+                                            <p>Téléphone fixe: +352 27996506</p>
+
+                                            <p>Téléphone portable: +352 691542795</p>
+
+                                            <p>Email: <a href="mailto:samuelberthelot@gmail.com">samuelberthelot@gmail.com</a>
+                                            </p>
+
+                                            <p>Registre de commerce: 10039733/0</p>
+
+                                            <div class="module_contact_icons module_small_padding">
+                                                <a href="#" class="ico_socialize_facebook1 ico_socialize type1"></a>
+                                            </div>
                                         </div>
-                                    </div><!-- .row-fluid -->
-                                </div><!-- .contentarea -->
+
+                                        <div class="span8 module_cont module_feedback_form module_small_padding1">
+                                            <form id="myform" action="{{ path('PhotographPhotoBundle_contact') }}"
+                                                  method="post" class="feedback_form">
+
+                                                {{ form_errors(form) }}
+
+                                                {{ form_widget(form.name) }}
+                                                <div class="clear"></div>
+                                                {{ form_widget(form.email, { 'attr': {'placeholder': 'email' }}) }}
+                                                <div class="clear"></div>
+                                                {{ form_widget(form.subject, { 'attr': {'placeholder': 'sujet' }}) }}
+                                                <div class="clear"></div>
+                                                {{ form_widget(form.body, { 'attr': {'placeholder': 'message' }}) }}
+                                                <div class="clear"></div>
+                                                <input value="envoyer votre message" type="submit" class="feedback_go"/>
+
+                                                <div class="ajaxanswer"></div>
+                                                {{ form_end(form) }}
+                                        </div>
+                                    </div>
+                                    <!-- .row-fluid -->
+                                </div>
+                                <!-- .contentarea -->
                             </div>
                             <div class="left-sidebar-block span3">
                                 //Sidebar Text
-                            </div><!-- .left-sidebar -->
+                            </div>
+                            <!-- .left-sidebar -->
                         </div>
                         <div class="clear"><!-- ClearFix --></div>
-                    </div><!-- .fl-container -->
+                    </div>
+                    <!-- .fl-container -->
                     <div class="right-sidebar-block span3">
                         <aside class="sidebar">
 
                         </aside>
-                    </div><!-- .right-sidebar -->
+                    </div>
+                    <!-- .right-sidebar -->
                     <div class="clear"><!-- ClearFix --></div>
                 </div>
-            </div><!-- .container -->
-        </div><!-- .content_wrapper -->
+            </div>
+            <!-- .container -->
+        </div>
+        <!-- .content_wrapper -->
     </div>
 
     <div class="header2top"></div>
 {% endblock %}
 
 {% block javascripts %}
-<script type="text/javascript">
-    $.ready(function(){
-        debugger
-       $("#myform").submit(function(){
-           var myForm = $("#myform");
+    <script type="text/javascript">
+        $.ready(function () {
+            debugger
+            $("#myform").submit(function () {
+                var myForm = $("#myform");
 
-           $.post(myForm.attr("action"), {
-               type: "POST",
-               data: myForm.serialize(),
-               cache: false
-           }, function(data){
-              if (data.responseCode === 200){
+                $.post(myForm.attr("action"), {
+                    type: "POST",
+                    data: myForm.serialize(),
+                    cache: false
+                }, function (data) {
+                    if (data.responseCode === 200) {
 
-              } else if (data.responseCode === 400){
+                    } else if (data.responseCode === 400) {
 
-              }else{
-                  alert('bad response');
-              }
-           });
-       });
+                    } else {
+                        alert('bad response');
+                    }
+                });
+            });
 
-    });
-</script>
+        });
+    </script>
 {% endblock %}

@@ -1,67 +1,69 @@
 {% extends '::base.html.twig' %}
 
 
-{%  block head %}
+{% block head %}
     <title>Samuel Berthelot - Photographe de mariage</title>
     <meta name="description" content="Photographe de mariage - Région Luxembourg Alsace-Lorraine Belgique" /
- {% endblock %}
+{% endblock %}
 
 {% block stylesheets %}
-<style>
-    h1 {
-        font-size: 14px;
-        color: #ffffff;
-    }
-</style>
+    <style>
+        h1 {
+            font-size: 14px;
+            color: #ffffff;
+        }
+    </style>
 {% endblock %}
 
 {% block body %}
-<div class="fullscreen_block">
-    <div class="contactcircle" style="top: 0px; opacity: 1; 	z-index:99;">
-        <p class="man">
-        <h4 style="color:#ffffff"> Samuel Berthelot</h4>
-        <b> <h1>Photographe de mariage </h1>
-                Luxembourg - Metz  <BR /> Strasbourg - Arlon</b>
-        </p>
-        <p class="phone">
-            +352 69 1542795 			     
-        </p>
-        <p class="phone">
-            +352 2799 6506
-        </p>
-        <p class="envelop">
-            <a href="mailto:samuelberthelot@gmail.com" >m'écrire un mail</a>
-        </p>
+    <div class="fullscreen_block">
+        <div class="contactcircle" style="top: 0px; opacity: 1; 	z-index:99;">
+            <p class="man">
+            <h4 style="color:#ffffff"> Samuel Berthelot</h4>
+            <b><h1>Photographe de mariage </h1>
+                Luxembourg - Metz <BR/> Strasbourg - Arlon</b>
+            </p>
+            <p class="phone">
+                +352 69 1542795
+            </p>
+
+            <p class="envelop">
+                <a href="mailto:samuelberthelot@gmail.com">m'écrire un mail</a>
+            </p>
+
+            <p>
+                RC: 10039733/0
+            </p>
+        </div>
+        <div class="img_container"></div>
     </div>
-    <div class="img_container"></div>
-</div>
 {% endblock %}
 
 {% block javascripts %}
-<script type = "text/javascript" src ="{{ asset('js/fs_gallery.js') }}"></script>
-<script>
-    var path = "{{ asset('img/gallery/')}}";
-    var pathThmb = "{{ asset('img/gallery/thmb/')}}";
+    <script type="text/javascript" src="{{ asset('js/fs_gallery.js') }}"></script>
+    <script>
+        var path = "{{ asset('img/gallery/')}}";
+        var pathThmb = "{{ asset('img/gallery/thmb/')}}";
 
-    gallery_set = [//Gallery Data
-        {image: path + '/gallery01.jpg', thmb: pathThmb + 'gallery01.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery02.jpg', thmb: pathThmb + 'gallery02.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery03.jpg', thmb: pathThmb + 'gallery03.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery04.jpg', thmb: pathThmb + 'gallery04.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery05.jpg', thmb: pathThmb + 'gallery05.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery06.jpg', thmb: pathThmb + 'gallery06.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery07.jpg', thmb: pathThmb + 'gallery07.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery08.jpg', thmb: pathThmb + 'gallery08.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery09.jpg', thmb: pathThmb + 'gallery09.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery10.jpg', thmb: pathThmb + 'gallery10.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery11.jpg', thmb: pathThmb + 'gallery11.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery12.jpg', thmb: pathThmb + 'gallery12.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-    ];
+        gallery_set = [//Gallery Data
+            {image: path + '/gallery01.jpg', thmb: pathThmb + 'gallery01.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+            {image: path + '/gallery02.jpg', thmb: pathThmb + 'gallery02.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+            {image: path + '/gallery03.jpg', thmb: pathThmb + 'gallery03.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+            {image: path + '/gallery04.jpg', thmb: pathThmb + 'gallery04.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+            {image: path + '/gallery05.jpg', thmb: pathThmb + 'gallery05.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+            {image: path + '/gallery06.jpg', thmb: pathThmb + 'gallery06.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+            {image: path + '/gallery07.jpg', thmb: pathThmb + 'gallery07.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+            {image: path + '/gallery08.jpg', thmb: pathThmb + 'gallery08.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+            {image: path + '/gallery09.jpg', thmb: pathThmb + 'gallery09.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+            {image: path + '/gallery10.jpg', thmb: pathThmb + 'gallery10.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+            {image: path + '/gallery11.jpg', thmb: pathThmb + 'gallery11.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+            {image: path + '/gallery12.jpg', thmb: pathThmb + 'gallery12.jpg', alt: 'Photographe de mariage - Luxembourg - France - Belgique', fit: 'cover', title: "Photographe de mariage", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+        ];
 
-    $('.fullscreen_block').fs_gallery({
-        fx: 'fade', /*fade, zoom, slide_left, slide_right, slide_top, slide_bottom*/
-        slide_time: 4000, /*This time must be < then time in css*/
-        slides: gallery_set
-    });
+        $('.fullscreen_block').fs_gallery({
+            fx: 'fade', /*fade, zoom, slide_left, slide_right, slide_top, slide_bottom*/
+            slide_time: 4000, /*This time must be < then time in css*/
+            slides: gallery_set
+        });
     </script>
 {% endblock %}
