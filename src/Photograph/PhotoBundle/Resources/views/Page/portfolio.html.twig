@@ -2,7 +2,7 @@
 
 {% block head %}
     <title>Samuel Berthelot Photographie - Le portfolio</title>
-    <meta name="description" content="Présentation des différents portfolio représentant mon travail."/>
+    <meta name="description" content="Portfolio - Mes photos de mariage."/>
 {% endblock %}
 
 {% block body %}
@@ -51,7 +51,8 @@
                                                     <div class="filter_img gallery_item">
                                                         <a href="{{ path('PhotographPhotoBundle_portfolio_wedding_post',  {'name': 'angelique-et-pierre' }) }}">
                                                             <img src="{{ asset('img/portfolio/portfolio1-1.jpg') }}"
-                                                                 alt="" width="570" height="444">
+                                                                 alt="mariage d'Angélique et Pierre à Strasbourg"
+                                                                 width="570" height="444">
 
                                                             <div class="gallery_fadder"></div>
                                                             <div class="ico_gallery"></div>
@@ -70,7 +71,8 @@
                                                     <div class="filter_img gallery_item">
                                                         <a href="{{ path('PhotographPhotoBundle_portfolio_wedding_post', {'name': 'maud-et-fabrice' }) }}">
                                                             <img src="{{ asset('img/portfolio/portfolio2-1.jpg') }}"
-                                                                 alt="" width="570" height="444">
+                                                                 alt="mariage de Maud et Fabrice à Grenoble" width="570"
+                                                                 height="444">
 
                                                             <div class="gallery_fadder"></div>
                                                             <div class="ico_gallery"></div>
@@ -89,7 +91,8 @@
                                                     <div class="filter_img gallery_item">
                                                         <a href="{{ path('PhotographPhotoBundle_portfolio_post', {'name': 'paysages' }) }}">
                                                             <img src="{{ asset('img/portfolio/portfolio3-1.jpg') }}"
-                                                                 alt="" width="570" height="444">
+                                                                 alt="photographe de mariage au Luxembourg" width="570"
+                                                                 height="444">
 
                                                             <div class="gallery_fadder"></div>
                                                             <div class="ico_gallery"></div>
@@ -148,9 +151,9 @@
             //<![CDATA[
             items_set = [//Gallery Data
 
-                {src: 'img/portfolio/portfolio1-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Fusce pellentesque laoreet quam ac rutrum.', description: 'Nunc lobortis odio et mauris iaculis id sollicitudin eros imperdiet. Etiam dapibus convallis dui, a blandit neque scelerisque a. Praesent accumsan, leo non placerat tincidunt.'},
-                {src: 'img/portfolio/portfolio2-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Vestibulum faucibus velit ut sem adipiscing ac.', description: 'Nunc tristique urna vitae eros aliquam consectetur. Nullam porttitor auctor felis, vitae laoreet nisi scelerisque sed. Quisque congue luctus massa pellentesque rutrum.'},
-                {src: 'img/portfolio/portfolio3-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'landscape', title: 'Aliquam eleifend purus eget mauris fermentum.', description: 'Maecenas lobortis justo vitae odio aliquam vel gravida ipsum bibendum. Sed ac orci quam, eu tempor odio. Duis elementum lorem vitae urna adipiscing.'},
+                {src: 'img/portfolio/portfolio1-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Mariage de Angélique et Pierre à Strasbourg.'},
+                {src: 'img/portfolio/portfolio2-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Mariage de Maud et Fabrice à Grenoble.'},
+                {src: 'img/portfolio/portfolio3-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'landscape', title: 'Photographe de mariage au Luxembourg.'},
             ];
             $('#list').portfolio_addon({
                 type: 1,

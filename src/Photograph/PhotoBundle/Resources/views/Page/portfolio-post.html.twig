@@ -50,7 +50,8 @@
             <div class="row-fluid">
                 <div class="span12 module_cont module_text_area module_small_padding">
                     <p>{{ post.getDescription() | raw }}</p>
-                    <a href="{{ path('PhotographPhotoBundle_gallery', {'name': post.getName() }) }}">voir la galerie
+                    <a href="{{ path('PhotographPhotoBundle_gallery', {'name': post.getName() }) }}"
+                       title="galerie photo du mariage">voir la galerie
                         complète</a>
                 </div>
             </div>
