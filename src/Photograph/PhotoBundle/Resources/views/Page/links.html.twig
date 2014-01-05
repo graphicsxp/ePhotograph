@@ -1,0 +1,62 @@
+{% extends '::base.html.twig' %}
+
+{% block head %}
+    <title>Samuel Berthelot Photographie - liens partenaires</title>
+    <meta name="description"
+          content="Liens partenaires de Samuel Berthelot Photographie."/>
+{% endblock %}
+
+{% block body %}
+    <div class="main_wrapper">
+        <!-- C O N T E N T -->
+        <div class="content_wrapper">
+            <div class="page_title_block">
+                <div class="container">
+                    <h1 class="title">Liens</h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="content_block no-sidebar row">
+                    <div class="fl-container span12">
+                        <div class="row">
+
+                            <div class="row-fluid">
+                                <div class="span12 module_cont module_text_area">
+
+                                    <a title="Samuel Berthelot Photographie sur Facebook" target="_blank"
+                                       href="https://www.facebook.com/Samuel.Berthelot.Photographe">
+                                        Samuel Berthelot Photographie sur Facebook <br><br>
+                                        <img class="image-links" src="{{ asset('img/sb_facebook.png') }}"
+                                             alt="Samuel Berthelot Photographie sur Facebook"
+                                             style="vertical-align: middle"/>
+
+                                    </a>
+
+
+                                </div>
+                            </div>
+
+                            <div class="row-fluid">
+                                <div class="span12 module_cont module_text_area">
+                                    <a title="Sarah Martinet Photography" target="_blank"
+                                       href="http://www.sarah-martinet-photographe.fr/mariages--weddings.html">
+                                        Sarah Martinet Photography
+                                        <br><br>
+                                        <img class="image-links" src="{{ asset('img/sarah.png') }}"
+                                             style="vertical-align: middle"/>
+
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <!-- .row-fluid -->
+                        </div>
+                        <!-- .contentarea -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- .main_wrapper -->
+    <div class="header2top"></div>
+{% endblock %}

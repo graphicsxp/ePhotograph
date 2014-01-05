@@ -17,6 +17,10 @@ PhotographPhotoBundle_about:
 PhotographPhotoBundle_faq:
     pattern:  /faq
     defaults: { _controller: PhotographPhotoBundle:Page:faq }
+
+PhotographPhotoBundle_links:
+    pattern:  /liens
+    defaults: { _controller: PhotographPhotoBundle:Page:links }
     
 PhotographPhotoBundle_prestations:
     pattern:  /prestations

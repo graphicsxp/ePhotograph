@@ -1,50 +1,63 @@
-﻿h1.small{
-    font-size:16px;
+﻿h1.small {
+    font-size: 16px;
 }
 
-/*------------------------------------------------------------------*/ 
+/*------------------------------------------------------------------*/
 /*	2) CONTENT
 /*------------------------------------------------------------------*/
 @media only screen and (max-width: 760px) {
     .contactcircle {
-        display:none;
-    }
-}
-.contactcircle{
-	width:180px;
-	height:180px;
-	background:url(../img/pixel.png) repeat;
-	margin:60px 20px;
-	float:left;
-	padding:50px;
-	-webkit-border-radius: 180px;	
-	-moz-border-radius: 180px;	
-	border-radius: 180px;
-	position:relative;
-}
-.contactcircle p{
-	color:#FFF;	
-	padding:0 0 0 30px;
-	font-size:14px;
-}
-.contactcircle p a:hover{
-	color:#666;
-}
-.contactcircle p.man{background:url(../img/man.png) no-repeat left top;}
-.contactcircle p.phone{background:url(../img/contact.png) no-repeat left top;}
-.contactcircle p.envelop{background:url(../img/envelop.png) no-repeat left top;}
-
-@media only screen and (max-width: 1040px) {
-    .formule_large{
         display: none;
     }
-    .formule_small{
+}
+
+.contactcircle {
+    width: 180px;
+    height: 180px;
+    background: url(../img/pixel.png) repeat;
+    margin: 60px 20px;
+    float: left;
+    padding: 50px;
+    -webkit-border-radius: 180px;
+    -moz-border-radius: 180px;
+    border-radius: 180px;
+    position: relative;
+}
+
+.contactcircle p {
+    color: #FFF;
+    padding: 0 0 0 30px;
+    font-size: 14px;
+}
+
+.contactcircle p a:hover {
+    color: #666;
+}
+
+.contactcircle p.man {
+    background: url(../img/man.png) no-repeat left top;
+}
+
+.contactcircle p.phone {
+    background: url(../img/contact.png) no-repeat left top;
+}
+
+.contactcircle p.envelop {
+    background: url(../img/envelop.png) no-repeat left top;
+}
+
+@media only screen and (max-width: 1040px) {
+    .formule_large {
+        display: none;
+    }
+
+    .formule_small {
         display: block;
     }
 }
 
 @media only screen and (min-width: 1040px) {
-    .formule_small{
+    .formule_small {
         display: none;
     }
 }
@@ -52,18 +65,26 @@
 @media only screen and (min-width: 459px) and (max-width: 1040px) {
 
     .prestation {
-        width:690px;
-        margin:0 auto;
+        width: 690px;
+        margin: 0 auto;
     }
 }
 
 @media only screen and (min-width: 459px) and (max-width: 760px) {
 
     .container {
-        width:420px;
-        margin:0 auto;
+        width: 420px;
+        margin: 0 auto;
     }
 }
+
+@media only screen and (max-width: 1040px) {
+
+    .image-links {
+        display: none;
+    }
+}
+
 .span12 {
     width: 100%;
 }

@@ -35,6 +35,11 @@ class PageController extends Controller
         return $this->render('PhotographPhotoBundle:Page:about.html.twig');
     }
 
+    public function linksAction()
+    {
+        return $this->render('PhotographPhotoBundle:Page:links.html.twig');
+    }
+
     public function faqAction()
     {
         return $this->render('PhotographPhotoBundle:Page:faq.html.twig');
