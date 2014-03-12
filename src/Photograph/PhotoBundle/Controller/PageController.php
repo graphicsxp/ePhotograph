@@ -55,6 +55,26 @@ class PageController extends Controller
         return $this->render('PhotographPhotoBundle:Page:prestations.html.twig');
     }
 
+    public function googleFakePageLuxembourgAction()
+    {
+        return $this->render('PhotographPhotoBundle:Page:mariage-luxembourg.html.twig');
+    }
+
+    public function googleFakePageLorraineAction()
+    {
+        return $this->render('PhotographPhotoBundle:Page:mariage-lorraine.html.twig');
+    }
+
+    public function googleFakePageAlsaceAction()
+    {
+        return $this->render('PhotographPhotoBundle:Page:mariage-alsace.html.twig');
+    }
+
+    public function googleFakePageBelgiqueAction()
+    {
+        return $this->render('PhotographPhotoBundle:Page:mariage-belgique.html.twig');
+    }
+
     public function galleryAction($name)
     {
         $finder = new Finder();

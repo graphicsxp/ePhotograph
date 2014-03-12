@@ -46,3 +46,17 @@ PhotographPhotoBundle_client:
     pattern:  /espace-client/{client}
     defaults: { _controller: PhotographPhotoBundle:Client:index }
 
+#fake routes to trick google
+
+PhotographPhotoBundle_googleFakePageLuxembourg:
+    pattern:  /photographe-mariage/luxembourg
+    defaults: { _controller: PhotographPhotoBundle:Page:googleFakePageLuxembourg}
+PhotographPhotoBundle_googleFakePageLorraine:
+        pattern:  /photographe-mariage/lorraine
+        defaults: { _controller: PhotographPhotoBundle:Page:googleFakePageLorraine}
+PhotographPhotoBundle_googleFakePageAlsace:
+        pattern:  /photographe-mariage/alsace
+        defaults: { _controller: PhotographPhotoBundle:Page:googleFakePageAlsace}
+PhotographPhotoBundle_googleFakePageBelgique:
+        pattern:  /photographe-mariage/belgique
+        defaults: { _controller: PhotographPhotoBundle:Page:googleFakePageBelgique}
