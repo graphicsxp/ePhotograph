@@ -7,17 +7,19 @@ use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Photograph\PhotoBundle\Document\Message;
 
-class ContactController extends Controller {
+class ContactController extends Controller
+{
 
-    public function indexAction(Request $request) {
+    public function indexAction(Request $request)
+    {
         $message = new Message();
 
         $form = $this->createFormBuilder($message)
-                ->add('name', 'text', array('attr' => array('placeholder' => 'nom')))
-                ->add('email', 'email')
-                ->add('subject', 'text')
-                ->add('body', 'textarea')
-                ->getForm();
+            ->add('name', 'text', array('attr' => array('placeholder' => 'nom')))
+            ->add('email', 'email')
+            ->add('subject', 'text')
+            ->add('body', 'textarea')
+            ->getForm();
 
         $form->handleRequest($request);
 
@@ -32,7 +34,7 @@ class ContactController extends Controller {
 
             //create mail and send it
             $mail = \Swift_Message::newInstance()
-                ->setSubject($message->getSubject())
+                ->setSubject('message from: ' . $message->getEmail() . ' - ' . $message->getSubject())
                 ->setFrom($message->getEmail())
                 ->setTo("graphicsxp@gmail.com")
                 ->setBody($message->getBody());
@@ -40,7 +42,7 @@ class ContactController extends Controller {
             $this->get('mailer')->send($mail);
 
         }
-        
+
         return $this->render('PhotographPhotoBundle:Contact:index.html.twig', array('form' => $form->createView()));
     }
 }
